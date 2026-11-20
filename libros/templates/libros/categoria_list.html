@@ -1,0 +1,21 @@
+{% extends 'libros/base.html' %}
+{% block contenido %}
+<h2>Categorías</h2>
+<a class="boton" href="{% url 'categoria_create' %}">+ Nueva categoría</a>
+<table>
+    <tr>
+        <th>Nombre</th><th>Descripción</th><th>Activa</th><th>Acciones</th>
+    </tr>
+    {% for c in object_list %}
+    <tr>
+        <td>{{ c.nombre }}</td>
+        <td>{{ c.descripcion }}</td>
+        <td>{{ c.activa|yesno:"Sí,No" }}</td>
+        <td>
+            <a href="{% url 'categoria_update' c.pk %}">Editar</a>
+            <a href="{% url 'categoria_delete' c.pk %}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

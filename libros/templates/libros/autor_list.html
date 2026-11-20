@@ -1,0 +1,21 @@
+{% extends 'libros/base.html' %}
+{% block contenido %}
+<h2>Autores</h2>
+<a class="boton" href="{% url 'autor_create' %}">+ Nuevo autor</a>
+<table>
+    <tr>
+        <th>Nombre</th><th>Nacionalidad</th><th>Nacimiento</th><th>Acciones</th>
+    </tr>
+    {% for a in object_list %}
+    <tr>
+        <td>{{ a.nombre }}</td>
+        <td>{{ a.nacionalidad }}</td>
+        <td>{{ a.fecha_nacimiento }}</td>
+        <td>
+            <a href="{% url 'autor_update' a.pk %}">Editar</a>
+            <a href="{% url 'autor_delete' a.pk %}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
