@@ -12,7 +12,7 @@ Incluye formularios de Django y CSS básico en las templates.
 ## Cómo ejecutar el proyecto
 
 1. Clonar el repositorio:
-   git clone https://github.com/TU_USUARIO/biblioteca_django.git
+   git clone https://github.com/EL_USUARIO/biblioteca_django.git
    cd biblioteca_django
 
 2. Crear y activar el entorno virtual:
