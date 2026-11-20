@@ -17,6 +17,7 @@ Incluye formularios de Django y CSS básico en las templates.
 
 2. Crear y activar el entorno virtual:
    python -m venv venv
+   
    venv\Scripts\activate
 
 3. Instalar dependencias:
